@@ -1,5 +1,6 @@
 package ru.stqa.addressbook;
 
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
@@ -14,8 +15,9 @@ public class GroupCreationTests {
     
     @BeforeMethod
     public void setUp() throws Exception {
+        System.setProperty("webdriver.gecko.driver", "C:\\\\gecko\\geckodriver.exe");
         wd = new FirefoxDriver();
-        wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        wd.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         wd.get("http://localhost/addressbook/group.php");
         login("admin", "secret");
     }
