@@ -1,5 +1,6 @@
 package ru.stqa.addressbook.appmanager.contacts;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class NavigationContactHelper extends BaseHelper {
@@ -8,5 +9,7 @@ public class NavigationContactHelper extends BaseHelper {
         super(wd);
     }
 
-    public void
+    public void gotoContactCreationPage () {
+        click(By.linkText("add new"));
+    }
 }

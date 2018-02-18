@@ -8,10 +8,12 @@ public class HelperBase {
     protected FirefoxDriver wd;
 
     public HelperBase(FirefoxDriver wd) {
+
         this.wd = wd;
     }
 
     protected void click(By locator) {
+
         wd.findElement(locator).click();
     }
 

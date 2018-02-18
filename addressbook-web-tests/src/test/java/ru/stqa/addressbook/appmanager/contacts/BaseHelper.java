@@ -8,6 +8,7 @@ public class BaseHelper {
     protected FirefoxDriver wd;
 
     public BaseHelper(FirefoxDriver wd) {
+
         this.wd = wd;
     }
 

@@ -1,12 +1,12 @@
-package ru.stqa.addressbook.tests;
+package ru.stqa.addressbook.tests.contacts;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import ru.stqa.addressbook.appmanager.ApplicationManager;
+import ru.stqa.addressbook.appmanager.contacts.ContactManager;
 
-public class TestBase {
+public class BaseTest {
 
-    protected final ApplicationManager app = new ApplicationManager();
+    protected final ContactManager app = new ContactManager();
 
     @BeforeMethod
     public void setUp() throws Exception {
@@ -19,5 +19,4 @@ public class TestBase {
 
         app.stop();
     }
-
 }
