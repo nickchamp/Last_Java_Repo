@@ -32,21 +32,21 @@ public class ContactHelper extends BaseHelper {
 
     public void deleteSelectedContact() {
 
-        click(By.xpath("//div[@id='content']/form[2]/div[2]/input"));
+        click(By.cssSelector("#content > form:nth-child(3) > input:nth-child(2)"));
     }
 
     public void selectContact() {
 
-        click(By.xpath("//div/div[4]/form[2]/table/tbody/tr[3]/td[1]/input"));
+        click(By.cssSelector("#maintable > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(8) > a:nth-child(1) > img:nth-child(1)"));
     }
 
     public void initContactModification() {
 
-        click(By.xpath("//table[@id='maintable']/tbody/tr[3]/td[8]/a/img"));
+        click(By.cssSelector("#maintable > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(8) > a:nth-child(1) > img:nth-child(1)"));
     }
 
     public void submitContactModification() {
 
-        click(By.xpath("//div[@id='content']/form[1]/input[22]"));
+        click(By.cssSelector("#content > form:nth-child(2) > input:nth-child(86)"));
     }
 }

@@ -16,7 +16,7 @@ public class ContactManager {
         System.setProperty("webdriver.gecko.driver", "C:\\\\gecko\\geckodriver.exe");
         wd = new FirefoxDriver();
         wd.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
-        wd.get("http://localhost/addressbook/edit.php");
+        wd.get("http://localhost/addressbook");
         contactHelper = new ContactHelper(wd);
         navigationContactHelper = new NavigationContactHelper(wd);
         sessionContactHelper = new SessionContactHelper(wd);
