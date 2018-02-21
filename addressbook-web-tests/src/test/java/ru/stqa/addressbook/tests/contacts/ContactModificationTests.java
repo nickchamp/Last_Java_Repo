@@ -6,10 +6,9 @@ import ru.stqa.addressbook.model.ContactData;
 public class ContactModificationTests extends BaseTest {
 
     @Test
-    public void testGroupModification () {
-        app.getContactHelper().selectContact();
+    public void testContactModification () {
         app.getContactHelper().initContactModification();
-        app.getContactHelper().fillContactForm(new ContactData("Pasha", "Reopen", "test@do-it.co"));
+        app.getContactHelper().fillContactForm(new ContactData("Pasha", "Reopen", "test@do-it.co", null), false);
         app.getContactHelper().submitContactModification();
         app.getContactHelper().returnToContactPage();
     }
