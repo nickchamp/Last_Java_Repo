@@ -6,9 +6,9 @@ import ru.stqa.addressbook.model.GroupData;
 public class GroupModificationTests extends TestBase {
 
     @Test
-    public void testGroupModification () {
+    public void testGroupModification() {
         app.getNavigationHelper().gotoGroupCreationPage();
-        if (! app.getGroupHelper().isThereAGroup()) {
+        if (!app.getGroupHelper().isThereAGroup()) {
             app.getGroupHelper().createGroup(new GroupData("test1", null, null));
         }
         app.getGroupHelper().selectGroup();
