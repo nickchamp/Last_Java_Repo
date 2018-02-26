@@ -32,6 +32,13 @@ public class BaseHelper {
         }
     }
 
+    public void acceptAlert() {
+        try {
+            wd.switchTo().alert().accept();
+        } catch (NoAlertPresentException e) {
+        }
+    }
+
     protected boolean isElementPresent(By locator) {
         try {
             wd.findElement(locator);
